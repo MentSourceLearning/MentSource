@@ -1,6 +1,4 @@
-# NICUB
-
-MENTSOURCE-Community-Website
+## MENTSOURCE
 
 ****
 
@@ -43,7 +41,7 @@ package.json            # List of all installed dependencies and technologies us
 ### 1. Clone project
 
 ```git
-  git clone https://github.com/NICUB-Open-Source-Community/NICUB-Community-Website.git
+  git clone https://github.com/NICUB-Open-Source-Community/mentSource.git
 ```
 
 ### 2. Install dependencies
