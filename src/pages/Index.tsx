@@ -1,0 +1,37 @@
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { HeroSection } from "@/components/home/HeroSection";
+import { PartnersMarquee } from "@/components/home/PartnersMarquee";
+import { BentoMission } from "@/components/home/BentoMission";
+import { HowItWorks } from "@/components/home/HowItWorks";
+import { ProgramsPreview } from "@/components/home/ProgramsPreview";
+// import { FeaturedMentors } from "@/components/home/FeaturedMentors";
+import { StatsSection } from "@/components/home/StatsSection";
+import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+import { NewsletterSection } from "@/components/home/NewsletterSection";
+import { FAQSection } from "@/components/home/FAQSection";
+import { CTASection } from "@/components/home/CTASection";
+
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroSection />
+        <PartnersMarquee />
+        <BentoMission />
+        <HowItWorks />
+        <ProgramsPreview />
+        {/* <FeaturedMentors /> */}
+        <StatsSection />
+        <TestimonialsSection />
+        <NewsletterSection />
+        <FAQSection />
+        <CTASection />
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Index;
