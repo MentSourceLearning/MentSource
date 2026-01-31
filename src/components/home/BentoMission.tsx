@@ -34,7 +34,7 @@ export function BentoMission() {
                   Our Mission
                 </h3>
                 <p className="text-lg lg:text-xl text-primary-foreground/80 max-w-xl leading-relaxed">
-                  To create a supportive ecosystem where anyone regardless of their experience level can learn, grow, and succeed. By offering hands-on training, mentorship programs, and real-world projects
+                  To create a supportive ecosystem where anyone regardless of their experience level can learn, grow, and succeed. By offering hands-on training, mentorship programs, and real-world projects.
                 </p>
               </div>
               

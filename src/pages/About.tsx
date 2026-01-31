@@ -99,7 +99,7 @@ const About = () => {
                 </div>
                 <h2 className="font-display text-2xl font-bold text-foreground mb-4">Our Mission</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  At NICUB, our mission is to create a supportive ecosystem where anyone regardless of their experience level can learn, grow, and succeed. By offering hands-on training, mentorship programs, and real-world projects, we aim to transform beginners into skilled developers and enable experienced contributors to refine their expertise while giving back to the open-source ecosystem
+                  At NICUB, our mission is to create a supportive ecosystem where anyone regardless of their experience level can learn, grow, and succeed. By offering hands-on training, mentorship programs, and real-world projects, we aim to transform beginners into skilled developers and enable experienced contributors to refine their expertise while giving back to the open-source ecosystem.
                 </p>
               </div>
               <div className="p-8 rounded-3xl bg-gradient-card border border-border/50">
