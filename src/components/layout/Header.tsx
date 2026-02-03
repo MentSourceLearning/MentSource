@@ -47,7 +47,7 @@ export function Header() {
             className="flex items-center gap-2 group flex-shrink-0"
             aria-label="MentSource Home"
           >
-            <img src="./logo1.png" className="h-[50px] w-[60px]" alt="" />
+            <img src="./logo4.png" className="h-[50px] w-[60px]" alt="" />
           </Link>
 
           {/* Desktop Navigation */}
