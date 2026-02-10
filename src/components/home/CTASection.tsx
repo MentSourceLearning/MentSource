@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ArrowRight, Heart, Users, BookOpen, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navigateTo } from "@/lib/utils";
@@ -31,13 +30,13 @@ export function CTASection() {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button variant="hero-outline" size="xl" asChild>
-                    <div onClick={() => navigateTo("/projects")} className="cursor-pointer">
+                    <div onClick={()=>navigateTo("/projects")} className="cursor-pointer">
                       <BookOpen className="h-5 w-5" />
                       Explore Projects
                     </div>
                   </Button>
                   <Button variant="warm" size="xl" asChild>
-                    <div onClick={()=> navigateTo("/community")}>
+                    <div onClick={()=>navigateTo("/community")} className="cursor-pointer">
                       <Users className="h-5 w-5" />
                       Get Involved
                     </div>
@@ -53,7 +52,7 @@ export function CTASection() {
                 <div className="flex items-center gap-3">
                   <img
                     src="https://media.licdn.com/dms/image/v2/D4E03AQGyCnHyrthPtQ/profile-displayphoto-crop_800_800/B4EZuDvfpOIwAI-/0/1767441838409?e=1770854400&v=beta&t=2RMjJBBfnZwWs4JeeymvhxcGjlfFIgSESf588CQcgZw"
-                    alt=""
+                    alt="Peculiar C Umeh"
                     className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>
@@ -87,7 +86,7 @@ export function CTASection() {
                 className="text-secondary-foreground hover:bg-secondary-foreground/10 p-0 h-auto"
                 asChild
               >
-                <div onClick={() => navigateTo("/mentorship")} className="flex items-center gap-2 cursor-pointer">
+                <div onClick={()=>navigateTo("/mentorship")} className="flex items-center gap-2 cursor-pointer">
                   Apply Now
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>
@@ -117,7 +116,7 @@ export function CTASection() {
                 className="text-white hover:bg-accent-foreground/10 p-0 h-auto"
                 asChild
               >
-                <div className="flex items-center gap-2 cursor-pointer">
+                <div onClick={()=>navigateTo("/")} className="flex items-center cursor-pointer gap-2 cursor-pointer">
                   Donate Now
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>

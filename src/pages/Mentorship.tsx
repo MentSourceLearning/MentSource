@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import {
   Users, MessageCircle, Calendar, Target, ArrowRight,
   CheckCircle, Star, Globe, Heart
 } from "lucide-react";
+import { navigateTo } from "@/lib/utils";
 
 const benefits = [
   {
@@ -85,10 +83,8 @@ const steps = [
 
 const Mentorship = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main className="pt-20">
-        {/* Hero */}
+    <>
+      {/* Hero */}
         <section className="section-padding bg-gradient-hero relative overflow-hidden">
           <div className="absolute top-20 right-10 w-72 h-72 bg-secondary/20 blob float opacity-40" />
           <div className="container-main relative z-10">
@@ -106,14 +102,14 @@ const Mentorship = () => {
                 Connect with experienced professionals who volunteer their time to guide the next generation. Free, personalized mentorship for everyone.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero-outline" className="cursor-pointer" size="xl" asChild>
-                  <p>
-                    Find a Mentor
-                    <ArrowRight className="h-5 w-5" />
-                  </p>
+                <Button variant="hero-outline" size="xl">
+                  Find a Mentor
+                  <ArrowRight className="h-5 w-5" />
                 </Button>
-                <Button size="xl" className="cursor-pointer" asChild>
-                  <p>Become a Mentor</p>
+                <Button size="xl" asChild>
+                  <div onClick={()=> navigateTo("/mentorship#become-mentor")} className="cursor-pointer">
+                    Become a Mentor
+                  </div>
                 </Button>
               </div>
             </div>
@@ -261,9 +257,7 @@ const Mentorship = () => {
             </svg>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+    </>
   );
 };
 

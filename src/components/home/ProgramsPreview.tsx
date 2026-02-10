@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ArrowRight, Palette, Users, HeartPulse, GraduationCap, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
@@ -95,9 +94,9 @@ export function ProgramsPreview() {
               </button>
             </div>
             <Button variant="outline" size="lg" asChild>
-              <div onClick={() => navigateTo("/projects")}>
+              <div onClick={() => navigateTo("/projects")} className="cursor-pointer">
                 View All
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className=" h-4 w-4" />
               </div>
             </Button>
           </div>

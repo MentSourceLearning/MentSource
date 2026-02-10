@@ -1,7 +1,5 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -77,10 +75,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main className="pt-20">
-        {/* Hero */}
+    <>
+      {/* Hero */}
         <section className="section-padding bg-gradient-hero">
           <div className="container-main">
             <div className="max-w-3xl mx-auto text-center">
@@ -237,9 +233,7 @@ const Contact = () => {
             </Button>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+    </>
   );
 };
 

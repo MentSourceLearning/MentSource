@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ArrowRight, Users, BookOpen, Code, Play, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroCommunity from "@/assets/hero-community.jpg";
@@ -57,7 +56,7 @@ export function HeroSection() {
                 </div>
               </Button>
               <Button variant="warm" size="xl" asChild className="group">
-                <div onClick={()=> navigateTo("/mentorship")}>
+                <div onClick={()=> navigateTo("/mentorship")} className="cursor-pointer">
                   <Play className="h-5 w-5 transition-transform group-hover:scale-110" />
                   Join the community
                 </div>

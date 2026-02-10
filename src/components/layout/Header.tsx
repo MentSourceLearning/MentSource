@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Heart, Sparkles } from "lucide-react";
+import { Menu, X, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn, navigateTo } from "@/lib/utils";
 
@@ -9,7 +9,6 @@ const navigation = [
   { name: "About Us", href: "/about", icon: null },
   { name: "Projects", href: "/projects", icon: null },
   { name: "Mentorship", href: "/mentorship", icon: null },
-  // { name: "Community", href: "/community", icon: null },
   { name: "Contact", href: "/contact", icon: null },
 ];
 
@@ -44,12 +43,11 @@ export function Header() {
           {/* Logo */}
           <div
             onClick={()=> navigateTo("/")}
-            className="flex items-center gap-2 group flex-shrink-0 cursor-pointer"
+            className="cursor-pointer flex items-center gap-2 group flex-shrink-0"
             aria-label="MentSource Home"
           >
-            <img src="./logo4.png" className="h-[50px] w-[60px]" alt="" />
+            <img src="./logo4.png" className="h-[50px] w-[60px]" alt="MentSource Logo" />
           </div>
-          {/* </Link> */}
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:gap-0" role="navigation" aria-label="Main navigation">
@@ -58,7 +56,7 @@ export function Header() {
                 key={item.name}
                 onClick={()=> navigateTo(item.href)}
                 className={cn(
-                  "relative px-4 py-2 text-sm font-semibold cursor-pointer transition-all duration-300",
+                  "relative px-4 cursor-pointer py-2 text-sm font-semibold transition-all duration-300",
                   "group overflow-hidden",
                   location.pathname === item.href
                     ? "text-primary"
@@ -86,16 +84,16 @@ export function Header() {
               variant="outline"
               size="sm"
               asChild
-              className="border-primary/30 hover:border-primary/60 hoverbg-primary/5"
+              className="border-primary/30 hover:border-primary/60 hover:bg-primary/5"
             >
-              <p onClick={()=> navigateTo("/community")}>Volunteer</p>
+              <div onClick={()=> navigateTo("/community")} className="cursor-pointer">Volunteer</div>
             </Button>
             <Button
               size="sm"
               asChild
               className="gap-2 shadow-lg hover:shadow-xl transition-shadow bg-base"
             >
-              <div>
+              <div onClick={()=> navigateTo("/")} className="flex items-center gap-2 cursor-pointer">
                 <Heart className="h-4 w-4" />
                 <span>Donate</span>
               </div>
@@ -131,11 +129,11 @@ export function Header() {
             <div className="border-t border-border/40 bg-gradient-to-b from-background/50 to-background/80 py-4 px-0">
               <div className="flex flex-col gap-2">
                 {navigation.map((item) => (
-                  <Link
+                  <div
                     key={item.name}
-                    to={item.href}
+                    onClick={()=> navigateTo(item.href)}
                     className={cn(
-                      "px-4 py-3 text-base font-semibold rounded-lg transition-all duration-200",
+                      "px-4 py-3 text-base font-semibold rounded-lg transition-all duration-200 cursor-pointer",
                       "relative overflow-hidden group",
                       location.pathname === item.href
                         ? "text-primary bg-primary-light"
@@ -146,7 +144,7 @@ export function Header() {
                     {location.pathname === item.href && (
                       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 -z-0" />
                     )}
-                  </Link>
+                  </div>
                 ))}
               </div>
               <div className="flex flex-col gap-3 pt-4 mt-2 border-t border-border/40">
@@ -155,17 +153,17 @@ export function Header() {
                   className="w-full rounded-lg"
                   asChild
                 >
-                  <p onClick={()=> navigateTo("/get-involved")}>Volunteer</p>
+                  <div onClick={()=> navigateTo("/community")} className="cursor-pointer">Volunteer</div>
                 </Button>
                 <Button
                   variant="warm"
                   className="w-full gap-2 shadow-md"
                   asChild
                 >
-                  <Link to="/donate">
+                  <div onClick={()=> navigateTo("/donate")} className="cursor-pointer">
                     <Heart className="h-4 w-4" />
                     Donate
-                  </Link>
+                  </div>
                 </Button>
               </div>
             </div>

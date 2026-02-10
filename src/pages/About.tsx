@@ -1,5 +1,3 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { Heart, Target, Eye, Users, Award, Globe } from "lucide-react";
 
 const team = [
@@ -53,20 +51,18 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2021", title: "Founded", description: "Started with 10 learners and 5 mentors" },
-  { year: "2022", title: "50+ Learners", description: "Reached our first major milestone" },
-  { year: "2023", title: "Global Expansion", description: "Launched in 3+ countries" },
-  { year: "2024", title: "Open Source", description: "All curriculum made open source" },
-  { year: "2025", title: "Partnerships", description: "Partnered with major tech companies" },
   { year: "2026", title: "1K Community", description: "Growing stronger every day" },
+  { year: "2025", title: "Partnerships", description: "Partnered with major tech companies" },
+  { year: "2024", title: "Open Source", description: "All curriculum made open source" },
+  { year: "2023", title: "Global Expansion", description: "Launched in 3+ countries" },
+  { year: "2022", title: "50+ Learners", description: "Reached our first major milestone" },
+  { year: "2021", title: "Founded", description: "Started with 10 learners and 5 mentors" },
 ];
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main className="pt-20">
-        {/* Hero */}
+    <>
+      {/* Hero */}
         <section className="section-padding bg-gradient-hero relative overflow-hidden">
           <div className="container-main">
             <div className="max-w-3xl mx-auto text-center">
@@ -203,9 +199,7 @@ const About = () => {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+    </>
   );
 };
 

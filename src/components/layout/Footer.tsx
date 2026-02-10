@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Heart, Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import { navigateTo } from "@/lib/utils";
 
 const footerLinks = {
@@ -8,18 +7,14 @@ const footerLinks = {
     { name: "Our Mentors", href: "/about" },
   ],
   programs: [
-    { name: "Learning Paths", href: "/programs" },
+    { name: "Learning Paths", href: "/projects" },
     { name: "Mentorship", href: "/mentorship" },
   ],
   getInvolved: [
     { name: "Become a Mentor", href: "/mentorship#become-mentor" },
-    { name: "Volunteer", href: "/get-involved" },
+    { name: "Volunteer", href: "/community" },
     { name: "Partner With Us", href: "/contact" },
-  ],
-  resources: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-  ],
+  ]
 };
 
 const socialLinks = [
@@ -36,8 +31,8 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-6">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div onClick={() => navigateTo("/")} className="flex items-center gap-2 mb-4">
-              <img src="./logo3.png" className="h-[60px] w-[80px]" alt="" />
+            <div onClick={()=>navigateTo("/")} className="flex items-center gap-2 mb-4 cursor-pointer">
+              <img src="./logo3.png" className="h-[60px] w-[80px]" alt="MentSource Logo" />
             </div>
             <p className="text-background/60 mb-6 max-w-sm">
               Making learning, open-source collaboration, and mentorship accessible to everyone, everywhere.
@@ -64,12 +59,12 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.organization.map((link) => (
                 <li key={link.name}>
-                  <p
-                    onClick={()=> navigateTo(link.href)}
-                    className="text-background/60 hover:text-primary transition-colors cursor-pointer"
+                  <div
+                  onClick={()=> navigateTo(link.href)}
+                    className="cursor-pointer text-background/60 hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </p>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -80,12 +75,12 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.programs.map((link) => (
                 <li key={link.name}>
-                  <p
-                    onClick={()=> navigateTo(link.href)}
-                    className="text-background/60 hover:text-primary transition-colors"
+                  <div
+                  onClick={()=> navigateTo(link.href)}
+                    className="cursor-pointer text-background/60 hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </p>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -96,28 +91,12 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.getInvolved.map((link) => (
                 <li key={link.name}>
-                  <p
+                  <div
                     onClick={()=> navigateTo(link.href)}
-                    className="text-background/60 hover:text-primary transition-colors cursor-pointer"
+                    className="cursor-pointer text-background/60 hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-display font-semibold text-background mb-4">Resources</h3>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <p
-                    onClick={()=> navigateTo(link.href)}
-                    className="text-background/60 hover:text-primary transition-colors cursor-pointer"
-                  >
-                    {link.name}
-                  </p>
+                  </div>
                 </li>
               ))}
             </ul>

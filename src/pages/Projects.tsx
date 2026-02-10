@@ -1,6 +1,3 @@
-import { Link } from "react-router-dom";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import {
   Palette,
@@ -62,10 +59,8 @@ const programs = [
 ];
 const Programs = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main className="pt-20">
-        {/* Hero */}
+    <>
+      {/* Hero */}
         <section className="section-padding bg-gradient-hero relative overflow-hidden">
           <div className="container-main">
             <div className="max-w-3xl mx-auto text-center">
@@ -191,9 +186,7 @@ const Programs = () => {
             </svg>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+    </>
   );
 };
 
