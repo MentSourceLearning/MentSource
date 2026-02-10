@@ -47,8 +47,13 @@ export function Header() {
             className="flex items-center gap-2 group flex-shrink-0 cursor-pointer"
             aria-label="MentSource Home"
           >
+<<<<<<< HEAD
             <img src="./logo1.png" className="h-[50px] w-[60px]" alt="" />
           </div>
+=======
+            <img src="./logo4.png" className="h-[50px] w-[60px]" alt="" />
+          </Link>
+>>>>>>> 9ecf6bc8389d9b3433a9ac44427ceb6e09abfcc2
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:gap-0" role="navigation" aria-label="Main navigation">

@@ -23,10 +23,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { name: "GitHub", icon: Github, href: "https://github.com" },
-  { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
+  { name: "GitHub", icon: Github, href: "https://github.com/MentSource" },
+  { name: "Twitter", icon: Twitter, href: "https://x.com/mentsource" },
   { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com" },
-  { name: "Email", icon: Mail, href: "mailto:hello@MentSource.org" },
+  { name: "Email", icon: Mail, href: "mailto:mentsource.1@gmail.com" },
 ];
 
 export function Footer() {
