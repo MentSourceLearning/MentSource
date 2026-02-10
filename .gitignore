@@ -25,4 +25,5 @@ dist-ssr
 
 #pages
 src/pages/Donate.tsx
+src/pages/GetInvolved.tsx
 src/components/home/FeaturedMentors.tsx

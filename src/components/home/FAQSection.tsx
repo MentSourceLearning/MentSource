@@ -7,6 +7,7 @@ import {
 import { HelpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { navigateTo } from "@/lib/utils";
 
 const faqs = [
   {
@@ -66,7 +67,7 @@ export function FAQSection() {
                     Can't find the answer you're looking for? Our team is here to help.
                   </p>
                   <Button variant="outline" size="sm" asChild>
-                    <Link to="/contact">Contact Support</Link>
+                    <div onClick={() => navigateTo("/contact")}>Contact Support</div>
                   </Button>
                 </div>
               </div>

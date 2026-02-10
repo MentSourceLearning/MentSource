@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,7 @@ import {
   Mail, MapPin, MessageCircle, Send, CheckCircle
 } from "lucide-react";
 import { toast } from "sonner";
+import { EMAILJS_CONFIG, RECIPIENT_EMAIL } from "@/config/emailjs";
 
 const contactMethods = [
   {
@@ -44,14 +46,34 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    toast.success("Message sent! We'll get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+
+      // Send the email
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          to_email: RECIPIENT_EMAIL,
+          subject: formData.subject,
+          message: formData.message,
+        }
+      );
+
+      toast.success("Message sent! We'll get back to you soon.");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

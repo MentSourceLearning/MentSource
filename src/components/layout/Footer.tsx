@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart, Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { navigateTo } from "@/lib/utils";
 
 const footerLinks = {
   organization: [
@@ -35,9 +36,9 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-6">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-4">
+            <div onClick={() => navigateTo("/")} className="flex items-center gap-2 mb-4">
               <img src="./logo3.png" className="h-[60px] w-[80px]" alt="" />
-            </Link>
+            </div>
             <p className="text-background/60 mb-6 max-w-sm">
               Making learning, open-source collaboration, and mentorship accessible to everyone, everywhere.
             </p>
@@ -63,12 +64,12 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.organization.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-background/60 hover:text-primary transition-colors"
+                  <p
+                    onClick={()=> navigateTo(link.href)}
+                    className="text-background/60 hover:text-primary transition-colors cursor-pointer"
                   >
                     {link.name}
-                  </Link>
+                  </p>
                 </li>
               ))}
             </ul>
@@ -79,12 +80,12 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.programs.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
+                  <p
+                    onClick={()=> navigateTo(link.href)}
                     className="text-background/60 hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </p>
                 </li>
               ))}
             </ul>
@@ -95,12 +96,12 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.getInvolved.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-background/60 hover:text-primary transition-colors"
+                  <p
+                    onClick={()=> navigateTo(link.href)}
+                    className="text-background/60 hover:text-primary transition-colors cursor-pointer"
                   >
                     {link.name}
-                  </Link>
+                  </p>
                 </li>
               ))}
             </ul>
@@ -111,12 +112,12 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-background/60 hover:text-primary transition-colors"
+                  <p
+                    onClick={()=> navigateTo(link.href)}
+                    className="text-background/60 hover:text-primary transition-colors cursor-pointer"
                   >
                     {link.name}
-                  </Link>
+                  </p>
                 </li>
               ))}
             </ul>

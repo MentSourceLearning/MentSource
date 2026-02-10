@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Heart, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, navigateTo } from "@/lib/utils";
 
 const navigation = [
   { name: "Home", href: "/", icon: null },
   { name: "About Us", href: "/about", icon: null },
   { name: "Projects", href: "/projects", icon: null },
   { name: "Mentorship", href: "/mentorship", icon: null },
-  { name: "Community", href: "/community", icon: null },
+  // { name: "Community", href: "/community", icon: null },
   { name: "Contact", href: "/contact", icon: null },
 ];
 
@@ -42,22 +42,22 @@ export function Header() {
       <nav className="container-main">
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
-          <Link
-            to="/"
-            className="flex items-center gap-2 group flex-shrink-0"
+          <div
+            onClick={()=> navigateTo("/")}
+            className="flex items-center gap-2 group flex-shrink-0 cursor-pointer"
             aria-label="MentSource Home"
           >
             <img src="./logo1.png" className="h-[50px] w-[60px]" alt="" />
-          </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:gap-0" role="navigation" aria-label="Main navigation">
             {navigation.map((item) => (
-              <Link
+              <div
                 key={item.name}
-                to={item.href}
+                onClick={()=> navigateTo(item.href)}
                 className={cn(
-                  "relative px-4 py-2 text-sm font-semibold transition-all duration-300",
+                  "relative px-4 py-2 text-sm font-semibold cursor-pointer transition-all duration-300",
                   "group overflow-hidden",
                   location.pathname === item.href
                     ? "text-primary"
@@ -75,7 +75,7 @@ export function Header() {
                       : "scale-x-0 group-hover:scale-x-100"
                   )}
                 />
-              </Link>
+              </div>
             ))}
           </div>
 
@@ -87,19 +87,17 @@ export function Header() {
               asChild
               className="border-primary/30 hover:border-primary/60 hoverbg-primary/5"
             >
-              <Link to="/community">Volunteer</Link>
+              <p onClick={()=> navigateTo("/community")}>Volunteer</p>
             </Button>
             <Button
               size="sm"
               asChild
               className="gap-2 shadow-lg hover:shadow-xl transition-shadow bg-base"
             >
-              {/* <Link to="/donate"> */}
               <div>
                 <Heart className="h-4 w-4" />
                 <span>Donate</span>
               </div>
-              {/* </Link> */}
             </Button>
           </div>
 
@@ -156,7 +154,7 @@ export function Header() {
                   className="w-full rounded-lg"
                   asChild
                 >
-                  <Link to="/get-involved">Volunteer</Link>
+                  <p onClick={()=> navigateTo("/get-involved")}>Volunteer</p>
                 </Button>
                 <Button
                   variant="warm"

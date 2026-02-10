@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Heart, Users, BookOpen, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { navigateTo } from "@/lib/utils";
 
 export function CTASection() {
   return (
@@ -30,16 +31,16 @@ export function CTASection() {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button variant="hero-outline" size="xl" asChild>
-                    <Link to="/projects">
+                    <div onClick={() => navigateTo("/projects")} className="cursor-pointer">
                       <BookOpen className="h-5 w-5" />
                       Explore Projects
-                    </Link>
+                    </div>
                   </Button>
                   <Button variant="warm" size="xl" asChild>
-                    <Link to="/community">
+                    <div onClick={()=> navigateTo("/community")}>
                       <Users className="h-5 w-5" />
                       Get Involved
-                    </Link>
+                    </div>
                   </Button>
                 </div>
               </div>
@@ -86,10 +87,10 @@ export function CTASection() {
                 className="text-secondary-foreground hover:bg-secondary-foreground/10 p-0 h-auto"
                 asChild
               >
-                <Link to="/mentorship" className="flex items-center gap-2">
+                <div onClick={() => navigateTo("/mentorship")} className="flex items-center gap-2 cursor-pointer">
                   Apply Now
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+                </div>
               </Button>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Palette, Users, HeartPulse, GraduationCap, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
+import { navigateTo } from "@/lib/utils";
 
 const programs = [
   {
@@ -94,10 +95,10 @@ export function ProgramsPreview() {
               </button>
             </div>
             <Button variant="outline" size="lg" asChild>
-              <Link to="/projects">
+              <div onClick={() => navigateTo("/projects")}>
                 View All
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </div>
             </Button>
           </div>
         </div>

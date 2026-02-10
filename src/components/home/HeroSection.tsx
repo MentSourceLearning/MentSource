@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Users, BookOpen, Code, Play, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroCommunity from "@/assets/hero-community.jpg";
+import { navigateTo } from "@/lib/utils";
 
 export function HeroSection() {
   return (
@@ -50,16 +51,16 @@ export function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10 animate-fade-in stagger-3">
               <Button variant="hero-outline" size="xl" asChild>
-                <Link to="/projects">
+                <div onClick={() => navigateTo("/projects")} className="cursor-pointer">
                   Become a Contributor
                   <ArrowRight className="h-5 w-5" />
-                </Link>
+                </div>
               </Button>
               <Button variant="warm" size="xl" asChild className="group">
-                <Link to="/mentorship">
+                <div onClick={()=> navigateTo("/mentorship")}>
                   <Play className="h-5 w-5 transition-transform group-hover:scale-110" />
                   Join the community
-                </Link>
+                </div>
               </Button>
             </div>
 

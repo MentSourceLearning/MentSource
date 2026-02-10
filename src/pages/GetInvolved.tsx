@@ -189,40 +189,6 @@ const GetInvolved = () => {
             </div>
           </div>
         </section>
-
-        {/* Donate CTA */}
-        <section className="section-padding" id="donate">
-          <div className="container-main">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-card border border-border/50 p-8 sm:p-12 lg:p-16">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 blob" />
-              <div className="relative z-10 max-w-2xl">
-                <Heart className="h-12 w-12 text-secondary mb-6" />
-                <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-                  Support Our Mission
-                </h2>
-                <p className="text-muted-foreground mb-6">
-                  Your donation directly funds learning materials, infrastructure, and programs that help thousands of learners worldwide.
-                </p>
-                <div className="grid grid-cols-3 gap-4 mb-8">
-                  {["$10", "$25", "$50"].map((amount) => (
-                    <button
-                      key={amount}
-                      className="py-3 px-4 rounded-xl border-2 border-border text-foreground font-semibold hover:border-primary hover:bg-primary-light transition-colors"
-                    >
-                      {amount}
-                    </button>
-                  ))}
-                </div>
-                <Button variant="warm" size="lg" asChild>
-                  <Link to="/donate">
-                    <Heart className="h-5 w-5" />
-                    Donate Now
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>

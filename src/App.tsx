@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Programs from "./pages/Projects";
 import Mentorship from "./pages/Mentorship";
-// import GetInvolved from "./pages/GetInvolved";
+import GetInvolved from "./pages/GetInvolved";
 import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
 import NotFound from "./pages/NotFound";
@@ -25,7 +25,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Programs />} />
           <Route path="/mentorship" element={<Mentorship />} />
-          {/* <Route path="/community" element={<GetInvolved />} /> */}
+          <Route path="/community" element={<GetInvolved />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/donate" element={<Donate />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
