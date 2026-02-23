@@ -57,7 +57,7 @@ export function CTASection() {
                   />
                   <div>
                     <p className="text-sm font-medium text-primary-foreground">Peculiar C Umeh</p>
-                    <p className="text-xs text-primary-foreground/60">Project Manager</p>
+                    <p className="text-xs text-primary-foreground/60">Founder</p>
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ export function CTASection() {
                 Support Our Mission
               </h3>
               <p className="text-accent-foreground/80 mb-6">
-                Help us reach more learners and keep education free for everyone.
+                Help us reach more learners in Africa and keep education free for everyone.
               </p>
               
               <Button 

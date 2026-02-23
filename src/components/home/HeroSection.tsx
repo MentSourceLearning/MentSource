@@ -27,7 +27,7 @@ export function HeroSection() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8 animate-fade-in">
               <span className="flex h-2 w-2 rounded-full bg-secondary animate-pulse" />
               <span className="text-sm font-medium text-primary-foreground/90">
-                100+ learners worldwide
+                40+ learners and growing. Reaching the unreached in Africa.
               </span>
             </div>
 
@@ -44,7 +44,7 @@ export function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl text-primary-foreground/80 max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in stagger-2">
-              MentSource drives open source innovation, enabling impactful collaborations and fostering a thriving global community of contributors.We strive to cultivate a global network of developers passionate about open source
+              MentSource drives open source innovation, enabling impactful collaborations and fostering a thriving global community of contributors.We strive to cultivate a global network of developers passionate about open source. Training and mentoring the next generation of open source contributors, empowering them to make meaningful contributions to projects that matter. We believe in the power of open source to drive innovation, promote collaboration, and create a more inclusive tech ecosystem.
             </p>
 
             {/* CTA Buttons */}
@@ -113,7 +113,7 @@ export function HeroSection() {
                   <Users className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-foreground">20+ Mentors</p>
+                  <p className="text-sm font-semibold text-foreground">10+ Mentors</p>
                   <p className="text-xs text-muted-foreground">Ready to help</p>
                 </div>
               </div>
@@ -125,7 +125,7 @@ export function HeroSection() {
                   <BookOpen className="h-5 w-5 text-secondary" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-foreground">50+ Projects</p>
+                  <p className="text-sm font-semibold text-foreground">6+ Projects</p>
                   <p className="text-xs text-muted-foreground">All free</p>
                 </div>
               </div>
@@ -149,17 +149,17 @@ export function HeroSection() {
         <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-xl mx-auto mt-16 lg:hidden animate-fade-in stagger-4">
           <div className="flex flex-col items-center p-4 rounded-2xl bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10">
             <Users className="h-6 w-6 text-secondary mb-2" />
-            <span className="text-2xl sm:text-3xl font-bold text-primary-foreground">10K+</span>
+            <span className="text-2xl sm:text-3xl font-bold text-primary-foreground">40+</span>
             <span className="text-xs sm:text-sm text-primary-foreground/60">Learners</span>
           </div>
           <div className="flex flex-col items-center p-4 rounded-2xl bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10">
             <BookOpen className="h-6 w-6 text-secondary mb-2" />
-            <span className="text-2xl sm:text-3xl font-bold text-primary-foreground">50+</span>
+            <span className="text-2xl sm:text-3xl font-bold text-primary-foreground">6+</span>
             <span className="text-xs sm:text-sm text-primary-foreground/60">Courses</span>
           </div>
           <div className="flex flex-col items-center p-4 rounded-2xl bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10">
             <Code className="h-6 w-6 text-secondary mb-2" />
-            <span className="text-2xl sm:text-3xl font-bold text-primary-foreground">500+</span>
+            <span className="text-2xl sm:text-3xl font-bold text-primary-foreground">10+</span>
             <span className="text-xs sm:text-sm text-primary-foreground/60">Mentors</span>
           </div>
         </div>
