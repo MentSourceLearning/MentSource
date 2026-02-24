@@ -2,7 +2,7 @@ import { Target, Globe, Sparkles, Users, Heart, Zap } from "lucide-react";
 
 export function BentoMission() {
   return (
-    <section className="section-padding bg-gradient-soft">
+    <section className="section-padding bg-gradient-soft mb-10">
       <div className="container-main">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

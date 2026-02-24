@@ -2,7 +2,6 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { BentoMission } from "@/components/home/BentoMission";
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { ProgramsPreview } from "@/components/home/ProgramsPreview";
-// import { FeaturedMentors } from "@/components/home/FeaturedMentors";
 import { StatsSection } from "@/components/home/StatsSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { NewsletterSection } from "@/components/home/NewsletterSection";
@@ -16,7 +15,6 @@ const Index = () => {
         <BentoMission />
         <HowItWorks />
         <ProgramsPreview />
-        {/* <FeaturedMentors /> */}
         <StatsSection />
         <TestimonialsSection />
         <NewsletterSection />
