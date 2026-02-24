@@ -14,7 +14,7 @@ export function BentoMission() {
             <span className="text-[#ff5b3e]">Free</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            We're building a world where anyone can learn, contribute, and grow—without financial or geographic barriers.
+            We're building a community where anyone can learn, contribute, and grow—without financial or geographic barriers.
           </p>
         </div>
 
@@ -45,12 +45,12 @@ export function BentoMission() {
                 </div>
                 <div className="w-px h-12 bg-primary-foreground/20" />
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-foreground">100+</div>
+                  <div className="text-3xl font-bold text-primary-foreground">40+</div>
                   <div className="text-sm text-primary-foreground/60">Learners</div>
                 </div>
                 <div className="w-px h-12 bg-primary-foreground/20" />
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-foreground">20+</div>
+                  <div className="text-3xl font-bold text-primary-foreground">10+</div>
                   <div className="text-sm text-primary-foreground/60">Mentors</div>
                 </div>
               </div>
