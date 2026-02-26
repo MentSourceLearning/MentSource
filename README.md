@@ -1,7 +1,5 @@
 ## MENTSOURCE
 
-****
-
 ## Overview
 
 An Open Source Community
@@ -55,8 +53,6 @@ package.json            # List of all installed dependencies and technologies us
 ```bash
   npm run dev
 ```
->>>>>>> 8adb62d (Feat: Project Setup and Structure)
-
 
 ## License
 
