@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#pages
+src/pages/Donate.tsx
+src/pages/GetInvolved.tsx
+src/components/home/FeaturedMentors.tsx
+src\config\emailjs.ts

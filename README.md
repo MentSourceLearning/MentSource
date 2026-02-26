@@ -58,4 +58,5 @@ package.json            # List of all installed dependencies and technologies us
 
 The documents in this repository are released under the MIT License. See [LICENSE](LICENSE) file.
 
+
 Copyright © MENTSOURCE. All rights reserved.
